@@ -19,7 +19,7 @@ class Queue(object):
         self.rear.next = n
         self.rear = n
 
-    #删除队头元素，并输出其值
+    #删除队头元素
     #此处注意“队列”这种数据结构不能删除中间元素
     def deQueue(self):
         if self.is_empty():
@@ -75,11 +75,17 @@ if __name__ == '__main__':
     queue.enQueue('n')
     
     queue.printQueue()
+    print()
     print(queue.is_empty())
     print(queue.length())
     print(queue.getHead())
-    queue.deQueue()  #注意此句是有输出值的
+    
+    queue.deQueue()  
+    print()
+    queue.printQueue()
+    print()
     print(queue.getHead())
+    print()
     
     queue.clear()
     print(queue.length())
